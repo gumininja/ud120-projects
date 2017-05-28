@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+import matplotlib
+matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 from prep_terrain_data import makeTerrainData
 from class_vis import prettyPicture
