@@ -9,6 +9,8 @@
 
 import pickle
 import numpy
+import matplotlib
+matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 import sys
 sys.path.append("../tools/")
@@ -74,3 +76,5 @@ try:
     Draw(pred, finance_features, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
 except NameError:
     print "no predictions object named pred found, no clusters to plot"
+
+plt.savefig('test.png')
