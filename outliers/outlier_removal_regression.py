@@ -2,6 +2,8 @@
 
 import random
 import numpy
+import matplotlib
+matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 import pickle
 
@@ -82,3 +84,4 @@ if len(cleaned_data) > 0:
 else:
     print "outlierCleaner() is returning an empty list, no refitting to be done"
 
+plt.savefig('test.png')
