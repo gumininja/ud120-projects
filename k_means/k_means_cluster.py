@@ -49,6 +49,11 @@ print "exercised stock options"
 print "min", min(exercised_stock_options)
 print "max", max(exercised_stock_options)
 
+salary = [data_dict[k]['salary'] for k in data_dict.keys() if data_dict[k]['salary'] != 'NaN']
+print "salary"
+print "min", min(salary)
+print "max", max(salary)
+
 ### the input features we want to use 
 ### can be any key in the person-level dictionary (salary, director_fees, etc.) 
 feature_1 = "salary"
