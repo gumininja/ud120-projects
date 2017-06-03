@@ -86,6 +86,12 @@ if len(cleaned_data) > 0:
     plt.xlabel("ages")
     plt.ylabel("net worths")
     plt.show()
+    print "after refit"
+    print "slope:", reg.coef_
+    print "intercept:", reg.intercept_
+    print "train score:", reg.score(ages_train, net_worths_train)
+    print "test score:", reg.score(ages_test, net_worths_test)
+
 
 
 else:
