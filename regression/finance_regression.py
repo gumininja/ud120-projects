@@ -44,6 +44,8 @@ test_color = "r"
 
 print "slope:", reg.coef_
 print "intercept:", reg.intercept_
+print "train score:", reg.score(feature_train, target_train)
+print "test score:", reg.score(feature_test, target_test)
 
 
 
