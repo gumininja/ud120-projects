@@ -18,5 +18,6 @@
 import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
+missing_total_payments = sum([enron_data[k]['total_payments'] == 'NaN' for k in enron_data.keys()])
 
-
+print "Missing total payments:", missing_total_payments, " all:", len(enron_data)
