@@ -46,6 +46,8 @@ test_color = "b"
 
 
 ### draw the scatterplot, with color-coded training and testing points
+import matplotlib
+matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 for feature, target in zip(feature_test, target_test):
     plt.scatter( feature, target, color=test_color ) 
