@@ -73,6 +73,11 @@ try:
     plt.plot( feature_test, reg.predict(feature_test) )
 except NameError:
     pass
+reg.fit(feature_test, target_test)
+plt.plot(feature_train, reg.predict(feature_train), color="b") 
+print "fit with outlier"
+print "slope:", reg.coef_
+print "intercept:", reg.intercept_
 plt.xlabel(features_list[1])
 plt.ylabel(features_list[0])
 plt.legend()
