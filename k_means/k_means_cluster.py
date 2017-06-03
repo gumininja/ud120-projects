@@ -44,7 +44,10 @@ def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature
 data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "r") )
 ### there's an outlier--remove it! 
 data_dict.pop("TOTAL", 0)
-
+exercised_stock_options = [data_dict[k]['exercised_stock_options'] for k in data_dict.keys() if data_dict[k]['exercised_stock_options'] != 'NaN']
+print "exercised stock options"
+print "min", min(exercised_stock_options)
+print "max", max(exercised_stock_options)
 
 ### the input features we want to use 
 ### can be any key in the person-level dictionary (salary, director_fees, etc.) 
