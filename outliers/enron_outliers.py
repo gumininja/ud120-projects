@@ -2,7 +2,9 @@
 
 import pickle
 import sys
-import matplotlib.pyplot
+import matplotlib
+matplotlib.use('pdf')
+import matplotlib.pyplot as plt
 sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
@@ -16,4 +18,13 @@ data = featureFormat(data_dict, features)
 ### your code below
 
 
+for point in data:
+    salary = point[0]
+    bonus = point[1]
+    plt.scatter( salary, bonus )
 
+plt.xlabel("salary")
+plt.ylabel("bonus")
+plt.show()
+
+plt.savefig('test.png')
